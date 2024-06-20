@@ -14,4 +14,9 @@ public class CarsController {
     public List<Object> search(){
         return List.of(new CarsRecord(1,"BMW",18));
     }
+
+    @GetMapping("/one")
+    public Object searchNull(){
+        return new CarsRecord(1,"BMW",18);
+    }
 }
