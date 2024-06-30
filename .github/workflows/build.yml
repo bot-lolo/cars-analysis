@@ -39,10 +39,10 @@ jobs:
           name: built-artifacts
           path: target/
 
-      - name: Run SonarCloud analysis
-        env:
-          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-        run: mvn sonar:sonar -Dsonar.projectKey=cars-analysis -Dsonar.organization=bot-lolo -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=$SONAR_TOKEN
+#      - name: Run SonarCloud analysis
+#        env:
+#          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+#        run: mvn sonar:sonar -Dsonar.projectKey=cars-analysis -Dsonar.organization=bot-lolo -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=$SONAR_TOKEN
 
 
 
