@@ -35,6 +35,14 @@ jobs:
       - name: Run tests with Maven
         run: mvn test --file pom.xml
 
+      - name: Run PMD analysis
+        run: mvn pmd:pmd --file pom.xml
+        continue-on-error: true
+
+      - name: Display PMD results
+        run: cat ./target/pmd.xml
+        if: success() && steps.pmd.outputs.output-file != ''
+
       - name: Upload build artifacts
         if: success()
         uses: actions/upload-artifact@v3
