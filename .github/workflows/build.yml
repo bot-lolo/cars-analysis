@@ -37,7 +37,7 @@ jobs:
 
       - name: Run PMD analysis
         run: mvn pmd:pmd --file pom.xml
-        continue-on-error: true
+        continue-on-error: false
 
       - name: Display PMD results
         run: cat ./target/pmd.xml
