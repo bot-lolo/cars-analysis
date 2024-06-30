@@ -39,9 +39,9 @@ jobs:
         run: mvn pmd:pmd --file pom.xml
         continue-on-error: false
 
-      - name: Display PMD results
-        run: cat ./target/pmd.xml
-        if: success() && steps.pmd.outputs.output-file != ''
+#      - name: Display PMD results
+#        run: cat ./target/pmd.xml
+#        if: success() && steps.pmd.outputs.output-file != ''
 
       - name: Upload build artifacts
         if: success()
